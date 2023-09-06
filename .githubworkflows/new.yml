@@ -1,0 +1,11 @@
+Name: Deploy Develop CI/CD
+on:
+ push:
+ branches: [develop]
+Jobs:
+ Deploy-develop:
+ Run-on: ubuntu-20.04
+steps:
+- name: Set Deploy Keys
+uses: webfactory/ssh-agent@v0.5.4
+with:
